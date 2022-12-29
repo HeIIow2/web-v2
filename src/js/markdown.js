@@ -32,6 +32,9 @@ function addTOC(header) {
     if(!toc) {
         return;
     }
+    if(toc.getAttribute("fill") === "false") {
+        return;
+    }
 
     header.id = toc_index.toString();
 

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Abi</title>
+    <title>Web-V2</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/text.css">
     <link rel="stylesheet" href="css/toc.css">
+    <link rel="stylesheet" href="css/misc.css">
 </head>
 
 <body>
@@ -23,18 +24,137 @@
 
     <div id="dropdown">
         <p style="font-size:15px;">&#9776;</p>
-        <a href="https://github.com/HeIIow2/lightweight-web-framework">GitHub</a>
+        <a href="https://github.com/HeIIow2/web-v2">GitHub</a>
     </div>
 </header>
 
-<ul id="toc">
+<ul id="toc" fill="false">
     <h1>Table of Contents</h1>
+    <li>1. Import</li>
+    <li>2. Usage</li>
+    <li>3. Lore Ipsum</li>
 </ul>
 
-<div class="markdown" src="http://localhost:63342/abi_page/src/assets/mathe.md"></div>
-<div class="markdown" src="http://localhost:63342/abi_page/src/assets/vector.md"></div>
+<div class="text">
+    <h1>Import</h1>
+    <p>To import the framework, paste the following code in the head of your html file:</p>
+    <pre>
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+&lt;link rel="stylesheet" href="https://ln.topdf.de/web_framework/css/styles.css"&gt;
+&lt;script src="https://ln.topdf.de/web_framework/js/marked.min.js"&gt;&lt;/script&gt;
+&lt;script type="module" src="https://ln.topdf.de/web_framework/js/index.js"&gt;&lt;/script&gt;
+    </pre>
 
-<div id="copyright">© Lars Noack</div>
+    <p>and this right below the body</p>
+    <pre>
+&lt;script src="js/markdown.js">&lt;/script>
+    </pre>
+</div>
+
+<div class="markdown">
+# Usage
+
+## Features
+
+### header
+
+To create a header, use the `header` element. If you want a child of it to be on the right instead of the left,
+give it the `push` class.
+
+### themes
+
+To create a button to switch between the currently available themes, simply create a `button` element with the class `theme-button`.
+
+### container
+
+For the contents you might want it responsive. You can create a `div` and give it the class `container`, to make every
+child responsive. The container elements also keep a nice distance
+
+### textbox
+
+The textbox is there to put your real content. The fields get highlighted and an outline will be made.
+Simply create a `div` with the class `textbox`. In a textbox you can use:
+- headers (`h1`, `h2`, `h3`)
+- blocktexts (`p`)
+- images (`img`)
+- lists (`ol`, `ul`)
+- inputs
+
+you can give a blocktext the class ``secondary`` to make it secondary and `elevated` to make it elevated.
+
+### images
+
+There are a couple of classes, you can add to your images in a textbox:
+- `negated`: the image gets negated when in dark mode.
+- `max`: the image spans over the whole textbox.
+- `half`: the image spans half the textbox.
+- `third`: the image spans over a third of the textbox.
+
+Due to responsive design the classes defining how far the image spans,
+may only apply on large screens.
+
+### markdown support
+
+If you want to use markdown, you just have to add the class `markdown` to a textbox.
+
+## Overview
+For an overview of everything supported, see down below the example. This should contain most of the features.
+If you want to see the html code, just press `ctrl` + `u`.
+</div>
+
+
+<div class="text">
+    <h1>Lorem Ipsum</h1>
+
+    <form onsubmit="return false;">
+        <input type="text" class="grow" placeholder="idk insert some text">
+        <input type="submit" value="submit">
+    </form>
+
+    <p class="elevated">This is elevated text.</p>
+    <img class="third" src="assets/image.jpg">
+
+    <p>
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
+        clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
+        consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+        sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+        sea takimata sanctus est Lorem ipsum dolor sit amet.
+    </p>
+    <p class="secondary">
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+        dolore magna aliquyam
+    </p>
+    <hr>
+    <h2>a list</h2>
+    <ul>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+    </ul>
+    <h2>another list</h2>
+    <ol>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+        <li>Lorem ipsum dolor sit amet</li>
+    </ol>
+
+    <h2>A full page picture</h2>
+    <img src="assets/placeholder.jpg" class="max">
+
+    <h1>h1 first header</h1>
+    <h2>h2 second header</h2>
+    <h3>h3 third header</h3>
+    <h4>h4 fourth header</h4>
+
+    <a href="https://ln.topdf.de/indexx/">link (all my projects)</a>
+</div>
+
+
+<div id="copyright">©_defs_not_you</div>
 </body>
 
 <script src="js/markdown.js"></script>
