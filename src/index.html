@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Abi</title>
+
+    <script src="js/marked.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <style>
+        .text, #toc {
+            margin: 30px;
+            padding: 15px;
+
+            border-style: solid;
+            border-width: 4px;
+            border-color: blueviolet;
+        }
+
+        h1 {
+            margin-top: 0;
+
+            border-width: 0;
+            border-style: solid;
+            border-bottom-width: 3px;
+            border-bottom-color: blueviolet;
+        }
+
+        h2 {
+            border-width: 0;
+            border-style: solid;
+            border-top-width: 1.5px;
+            border-top-color: blueviolet;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        td, th {
+            border-width: 1px;
+            border-style: solid;
+        }
+
+        td {
+            padding-left: 20px;
+        }
+
+        #toc > li {
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        a {
+            color: blueviolet;
+        }
+    </style>
+</head>
+
+<body>
+<ul id="toc">
+    <h1>Table of Contents</h1>
+</ul>
+
+<div class="markdown" src="http://localhost:63342/abi_page/src/assets/mathe.md"></div>
+<div class="markdown" src="http://localhost:63342/abi_page/src/assets/vector.md"></div>
+</body>
+
+<script src="js/markdown.js"></script>
+</html>
