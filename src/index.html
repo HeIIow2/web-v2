@@ -4,61 +4,28 @@
     <meta charset="UTF-8">
     <title>Abi</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <script src="js/marked.min.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    <script id="MathJax-script" async src="js/tex-chtml.min.js"></script>
 
-    <style>
-        .text, #toc {
-            margin: 30px;
-            padding: 15px;
-
-            border-style: solid;
-            border-width: 4px;
-            border-color: blueviolet;
-        }
-
-        h1 {
-            margin-top: 0;
-
-            border-width: 0;
-            border-style: solid;
-            border-bottom-width: 3px;
-            border-bottom-color: blueviolet;
-        }
-
-        h2 {
-            border-width: 0;
-            border-style: solid;
-            border-top-width: 1.5px;
-            border-top-color: blueviolet;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        td, th {
-            border-width: 1px;
-            border-style: solid;
-        }
-
-        td {
-            padding-left: 20px;
-        }
-
-        #toc > li {
-            margin-left: 15px;
-            margin-top: 10px;
-        }
-
-        a {
-            color: blueviolet;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/text.css">
+    <link rel="stylesheet" href="css/toc.css">
 </head>
 
 <body>
+<header>
+    <a id="home" href="https://ln.topdf.de/indexx/">Me</a>
+    <button class="theme-button">Theme</button>
+
+    <div id="dropdown">
+        <p style="font-size:15px;">&#9776;</p>
+        <a href="https://github.com/HeIIow2/lightweight-web-framework">GitHub</a>
+    </div>
+</header>
+
 <ul id="toc">
     <h1>Table of Contents</h1>
 </ul>
